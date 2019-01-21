@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/new/Public/css/bootstrap.css">
+    <script src="/new/Public/js/jquery-3.2.1.min.js"></script>
+</head>
+<style>
+    html.body{
+        width:100%;
+        height:100%;
+    }
+    .tips{
+        position:fixed;
+        top:0;
+        left:0;
+        width: 80%;
+        height:1px;
+        background:red;
+        z-index: 9999;
+    }
+    .col-lg-1{
+        position: absolute;
+        left: 0;
+        /*top:0;*/
+    }
+</style>
+<script>
+    $(function(){
+      let tips = $('.tips');
+      $(window).ajaxStart(function(){
+          tips.animate({width:'80%'},2000);
+      });
+      $(window).ajaxComplete(function(){
+          tips.stop().animate({width:'100%'}).queue(function(){
+              $(this).css('width',0);
+          })
+      })
+        $('.dropdown').on('click',function(){
+            $('.dropdown-menu',this).slideToggle();
+        })
+        /*let nav = $('#navbar-nav');
+        nav.on('click','li',function () {
+            $('.nav>li').removeClass('active');
+            $(this).addClass('active');
+        });*/
+    })
+
+</script>
+<body>
+<div class="tips"></div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">KTV</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="navbar-nav">
+                <li class="<?php echo $title=='游戏管理'?'active':'';?>"><a href="/new/index.php/gamemanage/index#list">游戏管理<span class="sr-only">(current)</span></a></li>
+                <li class="<?php echo $title=='商店管理'?'active':'';?>"><a href="/new/index.php/shopmanage/index#list">商店管理</a></li>
+                <li class="dropdown <?php echo $title=='歌曲管理'?'active':'';?>">
+                    <a href="/new/index.php/categorymanage/index#list" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">歌曲管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/new/index.php/categorymanage/index#list">分类管理</a></li>
+                        <li><a href="/new/index.php/cgsingermanage/index#list">歌手分类</a></li>
+                        <li><a href="/new/index.php/cgmusicmanage/index#list">歌单分类</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--<ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>-->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+</body>
+</html>

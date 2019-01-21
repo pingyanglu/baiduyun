@@ -1,0 +1,108 @@
+<?php
+include 'APP/views/adminheader.html';
+?>
+<meta charset="UTF-8">
+<script src="/new/Public/js/categorymanage.js"></script>
+<style>
+    .btn {
+        display: inline-block;
+        padding: 3px 12px;
+        border-radius: 4px;
+        background: skyblue;
+        line-height: 1.5;
+        font-size: 14px;
+        color: #000;
+    }
+    tbody input{
+        border:none;
+        text-align: center;
+        width:100%;
+        margin-top: 15px;
+    }
+    input{
+        border:none;
+        background: none;
+        outline: none;
+    }
+
+</style>
+<div class="container">
+    <div>
+        <!-- Nav tabs -->
+        <div class="col-lg-1">
+            <?php  include 'aside.html'?>
+        </div>
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#add" id="add" aria-controls="home" role="tab" data-toggle="tab">添加</a></li>
+            <li role="presentation"><a href="#list" id="list" aria-controls="profile" role="tab" data-toggle="tab">查看</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="add-tab" >
+                <div class="addbd" style="padding-top:50px;">
+                    <form action="javascript:;" class="form-horizontal" style="margn-top:100px;" method="post">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">歌手名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" name="cname" placeholder="歌手名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="image" class="col-sm-2 control-label">歌手照片</label>
+                            <div class="col-sm-10">
+                                <input style="width: auto;height: auto;border: none;outline: none;" type="file" class="form-control" id="image" multiple>
+                                <img src="" alt="..." id="thumb">
+                                <div class="imgBox">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">图片</label>
+                            <div class="col-sm-10">
+                                <input type="hidden" class="form-control" name="cimg" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">stype</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="" name="ctype" placeholder="stype">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="list-tab">
+                <div style="height:10px;"></div>
+                <table class="table table-bordered " style="text-align: center;border-radius: 4px;">
+                    <thead>
+                    <tr>
+                        <td>id</td>
+                        <td>名称</td>
+                        <td>图片</td>
+                        <td>ctype</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>真心话</td>
+                        <td>1</td>
+                        <td><a class="btn">删除</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

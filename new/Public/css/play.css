@@ -1,0 +1,134 @@
+@import url(base.css);
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../img/ggc.png") no-repeat center/cover;
+    padding: 0.24rem;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.88rem;
+}
+header a:first-of-type {
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+    margin-top: 0.24rem;
+    background: url("../img/at_04.png") no-repeat center/cover;
+}
+header p{
+    width: 70%;
+    height: 100%;
+    font-size: 0.36rem;
+    text-align: center;
+    color: #ffffff;
+}
+nav{
+    height: 6rem;
+    margin-top: 0.2rem;
+}
+nav>ul{
+    width:100%;
+    height:100%;
+    font-size: 0.22rem;
+    overflow: scroll;
+}
+nav>ul>li{
+    /*font-size: 0.22rem;*/
+    color: #fff;
+    text-align: center;
+    line-height: 2;
+}
+.but{
+    width:100%;
+    height:1.6rem;
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+.but>div{
+    font-size: 0.22rem;
+    width:1rem;
+    height:100%;
+}
+.but>div>img{
+    width:1rem;
+    height:1rem;
+}
+.but>div>p{
+    font-size: 0.22rem;
+    text-align: center;
+}
+.kongzhi{
+    width:100%;
+    height:1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.22rem;
+    align-content: space-between;
+    margin-top:0.5rem;
+}
+.kongzhi>div{
+    width:100%;
+    height:0.5rem;
+}
+.mai{
+    display: flex;
+    align-items: center;
+    /*margin-top: 0.5rem;*/
+}
+.mai>div:first-child{
+    width:0.4rem;
+    height:0.4rem;
+    background: url("../img/ly_07.png") no-repeat center/cover;
+}
+.yin>div:first-child{
+    width:0.4rem;
+    height:0.4rem;
+    background: url("../img/ly_07.png") no-repeat center/cover;
+}
+.yin{
+    display: flex;
+    align-items: center;
+}
+.kongzhi .tiao {
+    width: 5.15rem;
+    height: 0.05rem;
+    border-radius: 0.05rem;
+    background: #E8D9DD;
+    position: relative;
+}
+
+.kongzhi .tiao .select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0.05rem;
+    background: #FA3C72;
+}
+
+.kongzhi .button {
+    width: 0.16rem;
+    height: 0.16rem;
+    border-radius: 50%;
+    background: #FA3C72;
+    border: 0.03rem solid white;
+    box-shadow: 0 0 0.1rem 0.02rem #FFD3E6;
+    position: absolute;
+    right: -0.08rem;
+    top: -0.06rem;
+}

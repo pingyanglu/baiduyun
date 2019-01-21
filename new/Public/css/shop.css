@@ -1,0 +1,282 @@
+@import url(base.css);
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../img/yylbg.png") no-repeat center/cover;
+    padding: 0.24rem;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.88rem;
+}
+header a:first-of-type {
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+    margin-top: 0.24rem;
+    background: url("../img/at_04.png") no-repeat center/cover;
+}
+header p{
+    width: 1.5rem;
+    height: 100%;
+    font-size: 0.36rem;
+    color: #ffffff;
+}
+
+nav {
+    width: 100%;
+    height: 0.66rem;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    width: 3.06rem;
+    height: 0.66rem;
+    border-radius: 0.3rem;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0.07rem;
+    position: relative;
+}
+nav ul li {
+    flex:1;
+    height: 0.48rem;
+    text-align:center;
+    line-height: 0.48rem;
+    font-size: 0.22rem;
+    color: #000000;
+    z-index: 100;
+}
+nav ul li:nth-of-type(1).active ~ .flag {
+    transform: translate3d(0, 0, 0);
+}
+nav ul li:nth-of-type(2).active ~ .flag {
+    transform: translate3d(100%, 0, 0);
+}
+nav ul li.active span{
+    color: #ffffff;
+}
+nav ul .flag {
+    width: 1.46rem;
+    height: 0.52rem;
+    border-radius: 0.3rem;
+    background: #ff318d;
+    border: 0.01rem solid #e5267c;
+    position: absolute;
+    top: 0.07rem;
+    left: 0.07rem;
+    z-index: 99;
+    transition: all 0.5s;
+}
+.main {
+    width: 100%;
+    height: 8.1rem;
+    margin-top: 0.17rem;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    top: 2.6rem;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+.main ul {
+    width: 100%;
+    height: auto;
+}
+.main.active{
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+}
+.main ul li {
+    width: 100%;
+    height: 2.7rem;
+    display: flex;
+    background: url("../img/borderBottom.png") no-repeat 0.3rem bottom;
+}
+.main ul li div:first-of-type {
+    flex: 1;
+}
+.main ul li div:first-of-type img {
+    width: 2.3rem;
+    height: 2.44rem;
+    margin: 0.13rem 0.4rem;
+}
+.main ul li div:last-of-type {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.main ul li div:last-of-type div:first-of-type {
+    height: 0.3rem;
+    font-size: 0.18rem;
+    color: #575861;
+    line-height: 0.3rem;
+    margin-top: 0.6rem;
+}
+.main ul li div:last-of-type div:first-of-type span:nth-of-type(1) {
+    margin-right: 0.2rem;
+}
+.main ul li div:last-of-type div:first-of-type span:nth-of-type(2) {
+    display: inline-block;
+    width: 0.17rem;
+    height: 0.22rem;
+    background: url("../img/sd20.png") no-repeat center/cover;
+    margin-right: 0.06rem;
+}
+.main ul li div:last-of-type div:first-of-type span:nth-of-type(3) {
+    display: inline-block;
+    width: 0.17rem;
+    height: 0.22rem;
+    background: url("../img/sd20.png") no-repeat center/cover;
+    margin-right: 0.06rem;
+}
+.main ul li div:last-of-type div:first-of-type span:nth-of-type(4) {
+    display: inline-block;
+    width: 0.17rem;
+    height: 0.22rem;
+    background: url("../img/sd20.png") no-repeat center/cover;
+    margin-right: 0.06rem;
+}
+.main ul li div:last-of-type div:nth-of-type(2) {
+    font-size: 0.28rem;
+    color: #ff326c;
+    line-height: 0.6rem;
+}
+.main ul li div:last-of-type div:nth-of-type(2) span {
+    font-weight: bold;
+}
+.main ul li div:last-of-type div:nth-of-type(3) {
+    height: 0.35rem;
+    margin: 0 auto;
+    margin-top: 0.15rem;
+}
+.main ul li div:last-of-type div:nth-of-type(3) span {
+    float: left;
+}
+.main ul li div:last-of-type div:nth-of-type(3) span:nth-child(1) {
+    width: 0.35rem;
+    height: 0.35rem;
+    display: inline-block;
+    margin-right: 0.15rem;
+    background: url("../img/subtract.png") no-repeat center/cover;
+}
+.main ul li div:last-of-type div:nth-of-type(3) span:nth-child(2) {
+    width: 0.81rem;
+    height: 0.35rem;
+    border: 0.02rem solid #d2d2d2;
+    border-radius: 0.14rem;
+    display: inline-block;
+    margin-right: 0.15rem;
+    font-size: 0.18rem;
+    color: #858585;
+    line-height: 0.31rem;
+    text-align: center;
+}
+.main ul li div:last-of-type div:nth-of-type(3) span:nth-child(3) {
+    width: 0.35rem;
+    height: 0.35rem;
+    display: inline-block;
+    background: url("../img/plus.png") no-repeat center/cover;
+}
+.main li:last-of-type {
+    background: none;
+}
+footer{
+    width: 7rem;
+    height:2rem;
+    position: fixed;
+    bottom:0;
+}
+.choose{
+    width: 100%;
+    height: 0.44rem;
+    display: flex;
+    justify-content: space-between;
+}
+.choose>p{
+    font-size: 0.24rem;
+    color: #000;
+    line-height: 0.44rem;
+}
+.choose li {
+    padding: 0rem 0.12rem;
+    background: #ff318e;
+    text-align: center;
+    line-height: 0.44rem;
+    color: #ffffff;
+    font-size: 0.24rem;
+    border: 0.02rem solid #e12c7e;
+    border-radius: 0.06rem;
+}
+.choose>div{
+    overflow: hidden;
+    height:100%;
+    /*background: red;*/
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.choose ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose>div>span{
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    background: red;
+    margin-right:0.05rem;
+    border-radius: 50%;
+}
+.bottom{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    align-items:baseline;
+    /*align-content:center;*/
+}
+.total>span{
+    color: #F93C71;
+    font-size: 0.36rem;
+}
+.total>span:nth-of-type(2){
+    font-size: 0.5rem ;
+    font-weight: 600;
+}
+.total>span:last-of-type{
+    font-size: 0.2rem;
+}
+.bottom>a{
+    display: block;
+    width:3.5rem;
+    height:0.8rem;
+    border-radius: 100rem;
+    background-color: #FF328C;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: 0.8rem;
+    color:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*# sourceMappingURL=shop.css.map */

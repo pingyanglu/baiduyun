@@ -1,0 +1,116 @@
+@import 'base.css';
+html , body{
+    width:100%;
+    height:100%;
+}
+body{
+    overflow: hidden;
+    background: url("../img/gbj.png") no-repeat center/cover;
+    padding: 0.24rem;
+}
+header{
+    width: 100%;
+    height: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    width:0.4rem;
+    height:0.4rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+}
+header a:last-of-type{
+    width: 1rem;
+    color: #cccccc;
+}
+header a.active:last-of-type{
+    color: #ffffff;
+}
+header a:first-of-type{
+    background: url("../img/at_04.png") center/cover;
+}
+p{
+    font-size: 0.36rem;
+    color: #ffffff;
+}
+
+.main{
+    width:100%;
+    height:7.82rem;
+    padding:0.4rem 0.24rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+.main li{
+    width:2.08rem;
+    height:2.08rem;
+    background: url("../img/at_03.png") center/cover;
+    text-align: center;
+    line-height: 2.08rem;
+    font-size: 0;
+    margin-bottom: 0.4rem;
+    transition: 0.5s;
+}
+.main li.active{
+    /*transform: rotateY(360deg);*/
+    font-size: 0.24rem;
+    background: #ffffff;
+    color: #333333;
+    box-shadow: 0 0.09rem 0.27rem rgba(248,49,158,0.13);
+}
+.rules{
+    width:100%;
+    height:auto;
+    margin-top: 0.4rem ;
+}
+.rules>img{
+    width: 100%;
+}
+footer{
+    width: 100%;
+    height:0.88rem;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+footer button{
+    width: 3.5rem;
+    height:0.84rem;
+    border-radius: 0.42rem;
+    text-align: center;
+    line-height: 0.84rem;
+    border:1px solid #ffffff;
+    background: none;
+    position: relative;
+    z-index: 99999;
+}
+footer button.active{
+    color: #ffffff;
+    /*background: #ff318e;*/
+}
+
+footer button:nth-of-type(1).active ~ .flag{
+    transform: translate3D(0,0,0);
+}
+footer button:nth-of-type(2).active ~ .flag{
+    transform: translate3D(100%,0,0);
+}
+footer .flag{
+    width: 3.5rem;
+    height:0.84rem;
+    border-radius: 0.42rem;
+    text-align: center;
+    line-height: 0.84rem;
+    border:1px solid #ffffff;
+    background: #ff318e;
+    position:absolute;
+    left:0;
+    top: 0;
+    z-index: 10;
+    transition: .5s;
+}

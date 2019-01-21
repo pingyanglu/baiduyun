@@ -1,0 +1,132 @@
+@import url(base.css);
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../img/sjbj.png") no-repeat center/cover;
+    padding: 0.24rem;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.88rem;
+}
+header a:first-of-type {
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+    margin-top: 0.24rem;
+    background: url("../img/at_04.png") no-repeat center/cover;
+}
+header p{
+    width: 1.5rem;
+    height: 100%;
+    font-size: 0.36rem;
+    color: #ffffff;
+}
+nav{
+    height: 11rem;
+}
+nav>ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav>ul>li{
+    }
+nav>ul>li>a{
+    display: block;
+    font-size: 0.24rem;
+    color: #fff;
+    line-height: 2;
+}
+.sou{
+    display: block;
+    width:100%;
+    height:0.7rem;
+    background:#fff;
+    border:none;
+    border-radius:0.1rem;
+    margin:0.2rem 0;
+}
+.top{
+    width:100%;
+    height:4rem;
+    border-bottom: 0.01rem solid #fff;
+    position: relative;
+}
+.top>a>div{
+    width:100%;
+    height:100%;
+    background: url("/new/Public/img/banner1.png") no-repeat center/cover;
+}
+.center{
+    width:100%;
+    height:2.1rem;
+}
+.center>a:nth-of-type(1)>div{
+    width:40%;
+    height:100%;
+    float: left;
+    background: url("/new/Public/img/nan1.png") no-repeat center/cover;
+    border-right: 0.02rem solid #fff;
+    position: relative;
+}
+.center>a:nth-of-type(2)>div{
+    width:30%;
+    height:100%;
+    float: left;
+    background: url("/new/Public/img/gs-12.png") no-repeat center/cover;
+    border-right: 0.02rem solid #fff;
+    position: relative;
+}
+.center>a:nth-of-type(3)>div{
+    width:30%;
+    height:100%;
+    float: left;
+    background: url("/new/Public/img/gs-11.png") no-repeat center/cover;
+    position: relative;
+}
+.bottom{
+    width:100%;
+    height:3.3rem;
+    border-top: 0.02rem solid #fff;
+}
+.bottom>a:nth-of-type(1)>div{
+    width:40%;
+    height:100%;
+    float: left;
+    background: url("/new/Public/img/singer-03.png") no-repeat center/cover;
+    border-right: 0.02rem solid #fff;
+    position: relative;
+}
+.bottom>a:nth-of-type(2)>div{
+    width:60%;
+    height:100%;
+    float: left;
+    background: url("/new/Public/img/qcox.png") no-repeat center/cover;
+    border-right: 0.02rem solid #fff;
+    position: relative;
+}
+.des{
+    width:70%;
+    /*height:50%;*/
+    position: absolute;
+    background: rgba(0,0,0,.3);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 0.24rem;
+    color: #fff;
+    line-height: 4;
+}
